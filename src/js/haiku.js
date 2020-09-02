@@ -1,66 +1,29 @@
-class haiku {
-  constructor(lineArray1, lineArray2, lineArray3) {
+export class Haiku {
+  constructor() {
     this.lineArray1 = [];
     this.lineArray2 = [];
     this.lineArray3 = [];
-    this.allArrays = allArrays,
+    this.allArrays = false;
   }
 
-  lineToArray(lineInputVariable,whichlineParameter){
-    for (const index in whichlineParameter) {
-    let splitword = lineInputVariable.split(' ')
-    whichlineParameter.push(splitword)
-    }
-    return whichlineParameter
+  lineToArray(lineinputparameter) {
+    const line = lineinputparameter;
+    const stringArray = line.split(" ");
+    let xArray = [];
+    stringArray.forEach(function (word) {
+      xArray.push(word);
+    });
+    return xArray;
   }
-
-  let param1 = "Mary had a little lamb"
-  let param2 = testlinearray [];
-  console.log(lineToArray(param1,param2))
-  console.log(param2);
-
-  wordSyllableCount() {
-
-  }
-
-  lineSyllableCount() {
-    
-  }
-};
-
-function lineToArray() {
-
-let lineArray1 = ["Mary had a little lamb"];
-let brokenArray1 = [];
-
-for (i=0; i < lineArray1.length; i++) {
-  
 }
 
-}
+// const finalString = xArray.join(" ");
 
+//   wordSyllableCount() {
 
+//   }
 
-// ---Schema for:
+//   lineSyllableCount() {
 
-// -----haiku class
-
-// -----haiku object
-
-// -------lineArray1
-
-// -------lineArray2
-
-// -------lineArray3
-
-// -------boolean (is it a haiku)
-
-// -------syllable count for haiku object total()
-
-// ---functions within the class
-
-// -----wordSyllableCount
-
-// -----lineSyllableCount
-
-// -----lineToArray
+//   }
+// };
