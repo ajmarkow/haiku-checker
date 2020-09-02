@@ -17,3 +17,16 @@ describe("LineToArray", () => {
     expect(xArray).toEqual(["Mary", "had", "a", "little", "lamb"]);
   });
 });
+
+describe("sumLines", () => {
+  test("Testing summing the line arrays", () => {
+    let thehaiku = new Haiku();
+    thehaiku.lineArray1.push(3, 5, 7);
+    thehaiku.lineArray2.push(3, 5, 7);
+    thehaiku.lineArray3.push(3, 5, 7);
+    thehaiku.sumLines();
+    expect(thehaiku.linelengthArray1).toEqual(15);
+    expect(thehaiku.linelengthArray2).toEqual(15);
+    expect(thehaiku.linelengthArray3).toEqual(15);
+  });
+});

@@ -96,6 +96,8 @@ Copyright (c) 2020 **_Chloe Hellberg, AJ Markow_**
 3. test lineToArray('mary had a little lamb')
 4. Expect. lineToArray().toEqual([mary,had,a,little,lamb])
 
+**TEST PASSED**
+
 ---
 
 - sum syllable count per line
@@ -106,7 +108,7 @@ Copyright (c) 2020 **_Chloe Hellberg, AJ Markow_**
 3. Test: lineTwoArray [‘Mary’, ‘had’, ‘a’, ‘little’, ‘lamb]
 4. Expect: lineSyllableCount === 7, return true; lineSyllableCount > 7 || lineSyllableCount < 7, return false;
 
----
+## **TEST PASSED**
 
 -function that shows html element 'its a haiku'
 
