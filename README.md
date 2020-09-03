@@ -71,7 +71,9 @@ Copyright (c) 2020 **_Chloe Hellberg, AJ Markow_**
 1. Describe:
 
 - count vowels, subtract silent e's and other potential silent vowels.
+  **TEST PASSED**
 - Don't count 2nd vowel if there's two vowels in a row.
+  **Seems to be implemented**
 - Get final count of syllables from vowel count minus silent e's, and minus 2nd vowel in any diphthongs.
 - If theres a consonant after another consonant, add a new syllable, after the first consonant. (ex: in·tel·li·gence, syl·la·ble)
 - If theres a single consonant, divide word before that consonant.

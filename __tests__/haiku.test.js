@@ -1,4 +1,4 @@
-import { Haiku } from "./../src/js/haiku.js";
+import Haiku from "./../src/js/haiku.js";
 
 describe("Haiku", () => {
   test("Testing Haiku constructor storing data values", () => {
@@ -36,17 +36,19 @@ describe("countSyllable", () => {
     let thehaiku = new Haiku();
     thehaiku.lineArray1 = ["Mary"];
     let test = thehaiku.countSyllable();
-    // let arrayvalue = ["Mary"];
     expect(test).toEqual(1);
-    // thehaiku.lineArray1 = arrayvalue;
-    // countSyllable(thehaiku, lineArray1);
-    // let expectedvalue = thehaiku.linelengthArray1;
-    // expect(expectedvalue).toEqual(1);
   });
+  // This is testing the branching in countSyllable
   test("using a vowel leads to if statement being truthy", () => {
     let thehaiku = new Haiku();
     thehaiku.lineArray1 = ["Mary"];
     let expectation = thehaiku.countSyllable();
     expect(expectation).toBeTruthy();
+  });
+  test("Testing if two vowels in a row counts as one syllable.", () => {
+    let thehaiku = new Haiku();
+    thehaiku.lineArray1 = ["foo-foo"];
+    let test = thehaiku.countSyllable();
+    expect(test).toEqual(1);
   });
 });

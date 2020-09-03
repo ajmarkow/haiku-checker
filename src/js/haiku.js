@@ -1,4 +1,4 @@
-export class Haiku {
+export default class Haiku {
   constructor() {
     this.lineArray1 = [];
     this.linelengthArray1 = 0;
@@ -18,14 +18,27 @@ export class Haiku {
 
   countSyllable() {
     let counter = 0;
+    let index = 0;
     this.lineArray1.forEach(function (element) {
-      console.log(element);
-      // element.split("");
-      if (element.match(/[aeiou]/gi)) {
+      while (index <= element.length) {
         console.log(element);
-        counter += 1;
-        console.log(counter);
+        // element.split("");
+        if (element.match(/[a|e|i|o|u|aa|ee|ii|oo|uu]/gi)) {
+          console.log(element);
+          counter += 1;
+          console.log(counter);
+        } else {
+        }
+        index++;
+        console.log(index);
       }
+      // console.log(element);
+      // // element.split("");
+      // if (element.match(/[a|e|i|o|u|aa|ee|ii|oo|uu]/gi)) {
+      //   console.log(element);
+      //   counter += 1;
+      //   console.log(counter);
+      // }
     });
     console.log(this.lineArray1);
     // return this.linelengthArray1;
