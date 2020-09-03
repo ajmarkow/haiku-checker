@@ -17,17 +17,19 @@ export class Haiku {
   }
 
   countSyllable() {
+    let counter = 0;
     this.lineArray1.forEach(function (element) {
       console.log(element);
       // element.split("");
       if (element.match(/[aeiou]/gi)) {
         console.log(element);
-        console.log(Haiku.linelengthArray1);
-        Haiku.linelengthArray1 += 1;
+        counter += 1;
+        console.log(counter);
       }
     });
     console.log(this.lineArray1);
-    return this.linelengthArray1;
+    // return this.linelengthArray1;
+    return counter;
   }
 
   // countSyllable() {
