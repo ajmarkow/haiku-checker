@@ -12,12 +12,29 @@ export class Haiku {
   lineToArray(lineInputParameter) {
     const line = lineInputParameter;
     const stringArray = line.split(" ");
-    let xArray = [];
-    stringArray.forEach(function (word) {
-      xArray.push(word);
-    });
-    return xArray;
+
+    return stringArray;
   }
+
+  countSyllable() {
+    this.lineArray1.forEach(function (element) {
+      console.log(element);
+      // element.split("");
+      if (element.match(/[aeiou]/gi)) {
+        console.log(element);
+        console.log(Haiku.linelengthArray1);
+        Haiku.linelengthArray1 += 1;
+      }
+    });
+    console.log(this.lineArray1);
+    return this.linelengthArray1;
+  }
+
+  // countSyllable() {
+  //   this.lineArray1.lineToArray();
+  //   this.lineArray1.forEach(function)
+  // }
+
   sumLines() {
     const sumFunction = (a, b) => a + b;
     this.linelengthArray1 = this.lineArray1.reduce(sumFunction);

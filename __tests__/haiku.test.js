@@ -30,3 +30,17 @@ describe("sumLines", () => {
     expect(thehaiku.linelengthArray3).toEqual(15);
   });
 });
+
+describe("countSyllable", () => {
+  test("Testing if vowel count is returned correctly.", () => {
+    let thehaiku = new Haiku();
+    thehaiku.lineArray1 = ["Mary"];
+    let test = thehaiku.countSyllable();
+    // let arrayvalue = ["Mary"];
+    expect(test).toEqual(1);
+    // thehaiku.lineArray1 = arrayvalue;
+    // countSyllable(thehaiku, lineArray1);
+    // let expectedvalue = thehaiku.linelengthArray1;
+    // expect(expectedvalue).toEqual(1);
+  });
+});
