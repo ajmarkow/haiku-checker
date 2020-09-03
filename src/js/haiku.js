@@ -1,4 +1,4 @@
-export default class Haiku {
+export class Haiku {
   constructor() {
     this.lineArray1 = [];
     this.linelengthArray1 = 0;
@@ -18,20 +18,19 @@ export default class Haiku {
 
   countSyllable() {
     let counter = 0;
-    let index = 0;
+    // let index = 0;
     this.lineArray1.forEach(function (element) {
-      while (index <= element.length) {
+      // while (index <= element.length) {
+      console.log(element);
+      // element.split("");
+      if (element.match(/[a|e|i|o|u|aa|ee|ii|oo|uu]/gi)) {
         console.log(element);
-        // element.split("");
-        if (element.match(/[a|e|i|o|u|aa|ee|ii|oo|uu]/gi)) {
-          console.log(element);
-          counter += 1;
-          console.log(counter);
-        } else {
-        }
-        index++;
-        console.log(index);
+        counter += 1;
+        console.log(counter);
       }
+      // index++;
+      // console.log(index);
+      // }
       // console.log(element);
       // // element.split("");
       // if (element.match(/[a|e|i|o|u|aa|ee|ii|oo|uu]/gi)) {
@@ -45,11 +44,6 @@ export default class Haiku {
     return counter;
   }
 
-  // countSyllable() {
-  //   this.lineArray1.lineToArray();
-  //   this.lineArray1.forEach(function)
-  // }
-
   sumLines() {
     const sumFunction = (a, b) => a + b;
     this.linelengthArray1 = this.lineArray1.reduce(sumFunction);
@@ -58,13 +52,4 @@ export default class Haiku {
   }
 }
 
-// const finalString = xArray.join(" ");
-
-//   wordSyllableCount() {
-
-//   }
-
-//   lineSyllableCount() {
-
-//   }
-// };
+// export let pageHaiku = new Haiku();
