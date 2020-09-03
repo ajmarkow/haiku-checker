@@ -43,4 +43,10 @@ describe("countSyllable", () => {
     // let expectedvalue = thehaiku.linelengthArray1;
     // expect(expectedvalue).toEqual(1);
   });
+  test("using a vowel leads to if statement being truthy", () => {
+    let thehaiku = new Haiku();
+    thehaiku.lineArray1 = ["Mary"];
+    let expectation = thehaiku.countSyllable();
+    expect(expectation).toBeTruthy();
+  });
 });
